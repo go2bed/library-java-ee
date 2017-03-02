@@ -7,22 +7,22 @@
     <groupId>com.epam.chadov</groupId>
     <artifactId>library-java-ee</artifactId>
     <packaging>pom</packaging>
-    <version>${application.version}</version>
+    <version>1.0</version>
+
     <modules>
         <module>java-library-ee-core-ejb</module>
         <module>java-library-ee-ear</module>
         <module>java-library-ee-web</module>
-        <module>java-library-ee-rest</module>
+        <module>java-library-ee-web-common</module>
     </modules>
 
 
     <properties>
-        <application.version>1.0</application.version>
         <maven.compile.source>1.8</maven.compile.source>
         <maven.compile.target>1.8</maven.compile.target>
     </properties>
 
-
+    <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>javax</groupId>
@@ -30,5 +30,5 @@
                 <version>7.0</version>
             </dependency>
         </dependencies>
-
+    </dependencyManagement>
 </project>

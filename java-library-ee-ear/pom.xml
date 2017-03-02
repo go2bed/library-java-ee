@@ -5,7 +5,7 @@
     <parent>
         <artifactId>library-java-ee</artifactId>
         <groupId>com.epam.chadov</groupId>
-        <version>${application.version}</version>
+        <version>1.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -38,4 +38,21 @@
         </plugins>
     </build>
 
+
+    <dependencies>
+        <dependency>
+            <groupId>com.epam.chadov</groupId>
+            <artifactId>java-library-ee-core-ejb</artifactId>
+            <version>1.0</version>
+            <scope>provided</scope>
+            <type>ejb</type>
+        </dependency>
+        <dependency>
+            <groupId>com.epam.chadov</groupId>
+            <artifactId>java-library-ee-web</artifactId>
+            <version>1.0</version>
+            <scope>provided</scope>
+            <type>war</type>
+        </dependency>
+    </dependencies>
 </project>
