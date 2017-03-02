@@ -1,9 +1,11 @@
 package com.epam.chadov.api.persistence.entities;
 
 
-import javax.persistence.*;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
-import java.math.BigDecimal;
+import java.util.Objects;
 
 /**
  * @author Andrey_Chadov on 3/2/2017.
@@ -37,7 +39,7 @@ public class Entity {
 
         Entity entity = (Entity) o;
 
-        return id == entity.id;
+        return Objects.equals(id, entity.id);
 
     }
 
