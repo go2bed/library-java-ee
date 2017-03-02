@@ -5,12 +5,38 @@
     <parent>
         <artifactId>library-java-ee</artifactId>
         <groupId>com.epam.chadov</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>${application.version}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>java-library-ee-core-ejb</artifactId>
 
     <packaging>ejb</packaging>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-ejb-plugin</artifactId>
+                <version>2.5.1</version>
+                <configuration>
+                    <ejbVersion>3.0</ejbVersion>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
 </project>
